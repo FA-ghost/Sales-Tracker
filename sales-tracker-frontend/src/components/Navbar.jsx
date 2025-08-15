@@ -10,9 +10,12 @@ function Navbar(){
 
     return (
         <nav className="flex p-[10px] justify-end relative">
-            <div className="flex gap-[15px] p-[5px] items-center rounded-sm hover:bg-[#3B38A0]/80 hover:text-white" onClick={updateIsOpen}>
+            <div className="flex gap-[15px] p-[10px] items-center rounded-sm hover:bg-[#3B38A0]/80 hover:text-white" onClick={updateIsOpen}>
                 <img src={profilePic} alt="user profile picture" className="w-[40px] h-[40px] rounded-full"/>
-                <span>Manager-FA</span>
+                <div className="flex flex-col gap-[2px] text-[13px]">
+                    <span className="font-semibold">Welcome</span>
+                    <span>Manager-FA</span>
+                </div>
                 <div className={`w-[20px] h-[20px] rounded-full shadow-sm ${isOpen ? "rotate-180" : "rotate-0"} transition-all duration-300 ease-in-out`}>
                     <ChevronDown size={20} />
                 </div>
